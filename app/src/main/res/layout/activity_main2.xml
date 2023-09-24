@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <Spinner
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/space_20dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:hint="Enter Area"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:id="@+id/spinner"
+        android:layout_marginBottom="0dp"
+        android:layout_height="@dimen/space_50dp"
+        ></Spinner>
+</LinearLayout>
