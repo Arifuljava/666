@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#cfd8dc"
+    android:layout_height="match_parent"
+    tools:context=".NotificationActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/white"
+        android:id="@+id/profile_toolbar"
+        app:titleTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        >
+        <EditText
+            android:textColor="#000"
+            android:id="@+id/add_notes_title"
+            android:layout_below="@id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Notification Title"
+            android:inputType="textMultiLine"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <ScrollView
+            android:id="@+id/scroll"
+
+            android:layout_marginTop="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/add_notes_title"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                >
+                <androidx.core.widget.NestedScrollView
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:gravity="start"
+                        android:hint="Notification Details"
+                        android:paddingBottom="40dp"
+                        android:id="@+id/blog_detail_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/circular_std_book"
+
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                </androidx.core.widget.NestedScrollView>
+
+            </RelativeLayout>
+        </ScrollView>
+        <Button
+            android:layout_marginBottom="@dimen/space_15dp"
+            android:layout_below="@id/scroll"
+            android:id="@+id/buttonSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            android:text="Upload"
+            android:background="@drawable/primary_btn_bg"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="@dimen/_12ssp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

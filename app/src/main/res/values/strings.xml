@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Admin Apps</string>
+
+
+    <string name="login">Login</string>
+    <string name="forgot">Forgot Password</string>
+
+    <!--Navigation drawer items-->
+    <string name="feedback">Feedback</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+    ///
+
+
+    <!-- aduinit id section-->
+    <!-- <string name="admob_app_id">ca-app-pub-7774473624959541~2879529577</string>
+     <string name="ad_unit_id">ca-app-pub-7774473624959541/6375775669</string>
+     <string name="interstitial">ca-app-pub-7774473624959541/9439825222</string> -->
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="General">
+        <menu>
+            <item
+
+                android:id="@+id/addNote"
+                android:icon="@drawable/ic_home"
+                android:title="Home" />
+
+            <item
+                android:id="@+id/block"
+                android:icon="@drawable/ic_baseline_block_24"
+                android:title="Block a member" />
+
+
+
+
+
+            <item
+                android:id="@+id/notification"
+                android:icon="@drawable/ic_baseline_notifications_active_24"
+                android:title="Add Notification" />
+
+            <item
+
+                android:id="@+id/add_a_a"
+                android:icon="@drawable/ic_baseline_phone_android_24"
+                android:title="Add Payment Number" />
+
+            <item
+
+                android:id="@+id/depositlist"
+                android:icon="@drawable/ic_baseline_attach_money_24"
+                android:title="Deposit Request List" />
+
+            <item
+
+                android:id="@+id/add_a"
+                android:icon="@drawable/ic_baseline_add_a_photo_24"
+                android:title="Add Slider" />
+            <item
+
+                android:id="@+id/list___ofslider"
+                android:icon="@drawable/ic_baseline_list_24"
+                android:title="Slider List" />
+            //
+
+
+        </menu>
+    </item>
+
+    <item android:title="Support">
+        <menu>
+
+
+            <item
+                android:id="@+id/withdraw_off"
+                android:icon="@drawable/ic_baseline_all_inclusive_24"
+                android:title="Withdraw  Off" />
+            <item
+                android:id="@+id/withdraw_on"
+                android:icon="@drawable/ic_baseline_all_inclusive_24"
+                android:title="Withdraw  On" />
+
+
+            <item
+                android:id="@+id/shareapp"
+                android:icon="@drawable/ic_baseline_attach_money_24"
+                android:title="Payment Request" />
+
+
+
+            <item
+                android:id="@+id/shareapp1"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="Settings" />
+            <item
+                android:id="@+id/shareap77"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="Change Password" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_baseline_vpn_key_24"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+
+</menu>

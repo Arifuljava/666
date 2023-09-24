@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfd8dc"
+
+    tools:context=".Bkash_Activity">
+    <RelativeLayout
+
+        android:id="@+id/main_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:background="#cfd8dc"
+        android:layout_below="@id/main_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_below="@id/main_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:background="@drawable/border"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    android:hint="Enter Account Address"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:id="@+id/name"
+                    android:maxLength="25"
+                    android:layout_marginBottom="0dp"
+                    android:layout_height="@dimen/space_50dp"
+                    ></EditText>
+                <Spinner
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/space_20dp"
+                    android:background="@drawable/border"
+                    android:layout_marginTop="@dimen/space_20dp"
+                    android:hint="Enter Area"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:id="@+id/area"
+                    android:layout_marginBottom="0dp"
+                    android:layout_height="@dimen/space_50dp"
+                    ></Spinner>
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="150dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/email"
+                    android:background="@drawable/login_button"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Add"
+                    android:textColor="@color/off_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frag_signup_password"
+                    app:layout_constraintVertical_bias="0.941" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/space_10dp"
+                    android:layout_marginLeft="@dimen/space_10dp"
+
+                    android:layout_width="match_parent"
+                    android:id="@+id/rreeeed"
+                    android:layout_marginBottom="50dp"
+                    android:layout_height="wrap_content"
+                    ></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

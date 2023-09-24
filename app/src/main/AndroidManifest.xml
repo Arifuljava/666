@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grozziie.adminsection">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HelpLineActivity"></activity>
+        <activity android:name=".Taking_Information_to_User" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".RatingActivity" />
+        <activity android:name=".BlocklIstActivity" />
+        <activity android:name=".Report" />
+        <activity android:name=".Package_Active" />
+        <activity android:name=".Add_bannar" />
+        <activity android:name=".Show_Bannar" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".Package_Active12" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".Bkash_Activity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
