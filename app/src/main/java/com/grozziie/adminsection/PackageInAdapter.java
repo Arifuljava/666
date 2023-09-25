@@ -192,7 +192,7 @@ public class PackageInAdapter extends RecyclerView.Adapter<PackageInAdapter.myvi
                     }
                 }).create().show();
                  */
-                String[] option={"Transcation Details","Active Account","Delete Request"};
+                String[] option={"Transcation Details","Accept Deposit","Delete Request"};
                 AlertDialog.Builder builder=new AlertDialog.Builder(view.getContext());
                 builder.setTitle("Options");
                 builder.setItems(option, new DialogInterface.OnClickListener() {
@@ -202,10 +202,10 @@ public class PackageInAdapter extends RecyclerView.Adapter<PackageInAdapter.myvi
                             AlertDialog.Builder builder=new AlertDialog.Builder(view.getContext());
                             String message=data.get(position).getTransacation()+""+data.get(position).getUsernumber()+""+data.get(position)
                                     .getPackage_price();
-                            String aaa="Package Name : "+data.get(position)
-                                    .getPackage_name()+"\nTranscation balance  : "+data.get(position)
-                                    .getPackage_price()+"\nTranscation Method : "+data.get(position).getPayment_methode()+"\nPayment Number : "+
-                                    data.get(position).getUsernumber()+"\nTranscation ID : "+data.get(position).getTransacation();
+                            String aaa="Site Name : "+data.get(position)
+                                    .getPackage_name()+"\nDeposit balance  : "+data.get(position)
+                                    .getPackage_price()+"\nDeposit Method : "+data.get(position).getPayment_methode()+"\nPayment Number : "+
+                                    data.get(position).getUsernumber();
                             builder.setTitle("Transcation Details")
                                     .setMessage(aaa)
                                     .setPositiveButton("Close", new DialogInterface.OnClickListener() {
@@ -374,10 +374,10 @@ public class PackageInAdapter extends RecyclerView.Adapter<PackageInAdapter.myvi
                 AlertDialog.Builder builder=new AlertDialog.Builder(view.getContext());
                 String message=data.get(position).getTransacation()+""+data.get(position).getUsernumber()+""+data.get(position)
                         .getPackage_price();
-                String aaa="Package Name : "+data.get(position)
-                        .getPackage_name()+"\nTranscation balance  : "+data.get(position)
-                        .getPackage_price()+"\nTranscation Method : "+data.get(position).getPayment_methode()+"\nPayment Number : "+
-                        data.get(position).getUsernumber()+"\nTranscation ID : "+data.get(position).getTransacation();
+                String aaa="Site Name : "+data.get(position)
+                        .getPackage_name()+"\nDeposit balance  : "+data.get(position)
+                        .getPackage_price()+"\nDeposit Method : "+data.get(position).getPayment_methode()+"\nPayment Number : "+
+                        data.get(position).getUsernumber();
                 builder.setTitle("Transcation Details")
                         .setMessage(aaa)
                         .setPositiveButton("Close", new DialogInterface.OnClickListener() {

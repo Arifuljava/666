@@ -47,7 +47,11 @@
                 android:title="Slider List" />
             //
 
+            <item
 
+                android:id="@+id/add_web_site"
+                android:icon="@drawable/ic_baseline_web_24"
+                android:title="Add Link" />
         </menu>
     </item>
 
@@ -55,14 +59,7 @@
         <menu>
 
 
-            <item
-                android:id="@+id/withdraw_off"
-                android:icon="@drawable/ic_baseline_all_inclusive_24"
-                android:title="Withdraw  Off" />
-            <item
-                android:id="@+id/withdraw_on"
-                android:icon="@drawable/ic_baseline_all_inclusive_24"
-                android:title="Withdraw  On" />
+
 
 
             <item
@@ -76,14 +73,8 @@
                 android:id="@+id/shareapp1"
                 android:icon="@drawable/ic_baseline_settings_24"
                 android:title="Settings" />
-            <item
-                android:id="@+id/shareap77"
-                android:icon="@drawable/ic_baseline_settings_24"
-                android:title="Change Password" />
-            <item
-                android:id="@+id/logout"
-                android:icon="@drawable/ic_baseline_vpn_key_24"
-                android:title="Logout" />
+
+
         </menu>
     </item>
 

@@ -8,34 +8,51 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:exported="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity2">
+
+
+        </activity>
+        <activity android:name=".HelpLineActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Taking_Information_to_User"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".ListActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".RatingActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".BlocklIstActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Report"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Package_Active"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Add_bannar"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Show_Bannar"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".NotificationActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".PaymentActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Package_Active12"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".Bkash_Activity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".HomeActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <activity android:name=".HelpLineActivity" />
-        <activity android:name=".Taking_Information_to_User" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".RatingActivity" />
-        <activity android:name=".BlocklIstActivity" />
-        <activity android:name=".Report" />
-        <activity android:name=".Package_Active" />
-        <activity android:name=".Add_bannar" />
-        <activity android:name=".Show_Bannar" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".PaymentActivity" />
-        <activity android:name=".Package_Active12" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity android:name=".Bkash_Activity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 

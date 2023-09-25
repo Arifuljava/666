@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseFirestore=FirebaseFirestore.getInstance();
         FirebaseApp.initializeApp(MainActivity.this);
         firebaseFirestore = FirebaseFirestore.getInstance();
+        Toast.makeText(this, "ggggg", Toast.LENGTH_SHORT).show();
 
 
 
@@ -69,81 +70,24 @@ public class MainActivity extends AppCompatActivity {
         YoYo.with(Techniques.FadeInUp)
                 .duration(5000)
                 .playOn(findViewById(R.id.appname));
+       // startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                ////startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 
-
-                final FlatDialog flatDialog1 = new FlatDialog(MainActivity.this);
-                flatDialog1.setTitle("Admin Panel Login")
-                        .setSubtitle("Please enter username and password for admin panel login.")
-                        .setFirstTextFieldHint("Username")
-                        .setSecondTextFieldHint("Password")
-                        .setFirstButtonText("Ok")
-                        .setSecondButtonText("Cancel")
-                        .withFirstButtonListner(new View.OnClickListener() {
+                firebaseAuth.signInWithEmailAndPassword("arig@gmail.com ", "123456")
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onClick(View view) {
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(MainActivity.this, "fffff", Toast.LENGTH_SHORT).show();
 
-                                String first = flatDialog1.getFirstTextField().toLowerCase().toString();
-                                String second = flatDialog1.getSecondTextField().toLowerCase().toString();
-                                if (TextUtils.isEmpty(first) || TextUtils.isEmpty(second)) {
-                                    Toast.makeText(MainActivity.this, "Enter all information", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    final KProgressHUD progressDialog = KProgressHUD.create(MainActivity.this)
-                                            .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                                            .setLabel("Checking........")
-                                            .setCancellable(false)
-                                            .setAnimationSpeed(2)
-                                            .setDimAmount(0.5f)
-                                            .show();
-                                    firebaseFirestore.collection("AdminLogin1")
-                                            .document("abc" + "@gmail.com")
-                                            .get()
-                                            .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                                    if (task.isSuccessful()) {
-                                                        if (task.getResult().exists()) {
-
-                                                            String username = task.getResult().getString("username");
-                                                            String password = task.getResult().getString("password");
-                                                            if (username.toLowerCase().toString().equals(first) && password.toLowerCase().toString().equals(second)) {
-                                                                firebaseAuth.signInWithEmailAndPassword("sadia@gmail.com", "123456")
-                                                                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                                                            @Override
-                                                                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                                                                if (task.isSuccessful()) {
-                                                                                    progressDialog.dismiss();
-                                                                                    flatDialog1.dismiss();
-                                                                                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                                                                                }
-                                                                            }
-                                                                        });
-                                                            } else {
-                                                                progressDialog.dismiss();
-                                                                Toast.makeText(MainActivity.this, "Username or Password is incorrect", Toast.LENGTH_SHORT).show();
-                                                            }
-
-                                                        }
-                                                    }
-                                                }
-                                            });
                                 }
-
-
                             }
-                        })
-                        .withSecondButtonListner(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                flatDialog1.dismiss();
-                            }
-                        })
-                        .show();
-
+                        });
 
 
             }

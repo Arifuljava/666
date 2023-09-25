@@ -203,7 +203,149 @@ public class HomeActivity extends  AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
         switch (id) {
 
+            case R.id.add_web_site:
+String List[]={"First","Second","Third","Fourth","Fifth","Sixh"};
+                final FlatDialog flatDialog3_website = new FlatDialog(HomeActivity.this);
+                flatDialog3_website.setTitle("Add Link")
+                        .setSubtitle("Are you want to add link?")
+                        .setFirstTextFieldHint("Link")
+                        .setFirstButtonText("Ok")
+                        .setSecondButtonText("Cancel")
+                        .withFirstButtonListner(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                flatDialog3_website.dismiss();
+                                final KProgressHUD progressDialog=  KProgressHUD.create(HomeActivity.this)
+                                        .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                                        .setLabel("Please wait")
+                                        .setCancellable(false)
+                                        .setAnimationSpeed(2)
+                                        .setDimAmount(0.5f)
+                                        .show();
+                                String name=flatDialog3_website.getFirstTextField().toLowerCase().toString();
+                                if (TextUtils.isEmpty(name)) {
+                                    progressDialog.dismiss();
 
+                                    Toasty.error(getApplicationContext(),"Error",Toasty.LENGTH_SHORT,true).show();
+                                }
+                                else {
+                                    flatDialog3_website.dismiss();
+                                    AlertDialog.Builder builder=new AlertDialog.Builder(HomeActivity.this);
+                                    builder.setTitle("Select a option")
+                                            .setItems(List, new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    if (which==0)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("1")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    //2
+                                                    else    if (which==1)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("2")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    //3
+                                                    else    if (which==2)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("3")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    //4
+                                                    else    if (which==3)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("4")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    //5
+                                                    else    if (which==4)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("5")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    //6
+                                                    else    if (which==5)
+                                                    {
+                                                        firebaseFirestore.collection("Link")
+                                                                .document("6")
+                                                                .update("link",""+name)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful())
+                                                                        {
+                                                                            Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+
+                                                }
+                                            }).create();
+                                    builder.show();
+                                }
+
+                            }
+                        })
+                        .withSecondButtonListner(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                flatDialog3_website.dismiss();
+                            }
+                        })
+                        .show();
+                break;
             case R.id.logout:
                 AlertDialog.Builder warning = new AlertDialog.Builder(HomeActivity.this)
                         .setTitle("Logout")
@@ -232,108 +374,15 @@ public class HomeActivity extends  AppCompatActivity implements NavigationView.O
 
                 warning.show();
                 break;
-            case R.id.shareap77:
-                final FlatDialog flatDialog1 = new FlatDialog(HomeActivity.this);
-                flatDialog1.setTitle("Admin Panel")
-                        .setSubtitle("Are you want to change admin panel password?")
-                        .setFirstTextFieldHint("ইউজারনেম")
-                        .setFirstTextField("admin")
-                        .setSecondTextFieldHint("Password")
-                        .setFirstButtonText("Ok")
-                        .setSecondButtonText("Cancel")
-                        .withFirstButtonListner(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
 
-                                String  first=flatDialog1.getFirstTextField().toLowerCase().toString();
-                                String second=flatDialog1.getSecondTextField().toLowerCase().toString();
-                                if (TextUtils.isEmpty(first)|| TextUtils.isEmpty(second)) {
-                                    Toast.makeText(HomeActivity.this, "Give all information", Toast.LENGTH_SHORT).show();
-                                }
-                                else {
-                                    final KProgressHUD progressDialog=  KProgressHUD.create(HomeActivity.this)
-                                            .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                                            .setLabel("Locading........")
-                                            .setCancellable(false)
-                                            .setAnimationSpeed(2)
-                                            .setDimAmount(0.5f)
-                                            .show();
-                                    firebaseFirestore.collection("AdminLogin1")
-                                            .document("abc"+"@gmail.com")
-                                            .update("password",""+flatDialog1.getSecondTextField().toString())
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        firebaseAuth.signOut();
-                                                        progressDialog.dismiss();
-                                                        flatDialog1.dismiss();
-                                                        Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
-                                                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                                                    }
-                                                }
-                                            });
-                                }
-
-
-                            }
-                        })
-                        .withSecondButtonListner(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                flatDialog1.dismiss();
-                            }
-                        })
-                        .show();
-                break;
 
             case R.id.add_a:
                 startActivity(new Intent(getApplicationContext(),Add_bannar.class));
 
                 return true;
 
-            case R.id.withdraw_off:
-                final KProgressHUD progres11sDialog2211=  KProgressHUD.create(HomeActivity.this)
-                        .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                        .setLabel("Please wait")
-                        .setCancellable(false)
-                        .setAnimationSpeed(2)
-                        .setDimAmount(0.5f)
-                        .show();
-                firebaseFirestore.collection("Payment_Admin_Checking")
-                        .document("abc@gmail.com")
-                        .update("checker","1")
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    progres11sDialog2211.dismiss();
-                                    Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                break;
-            case R.id.withdraw_on:
-                final KProgressHUD progressDialog2211=  KProgressHUD.create(HomeActivity.this)
-                        .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                        .setLabel("Please wait")
-                        .setCancellable(false)
-                        .setAnimationSpeed(2)
-                        .setDimAmount(0.5f)
-                        .show();
-                firebaseFirestore.collection("Payment_Admin_Checking")
-                        .document("abc@gmail.com")
-                        .update("checker","0")
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    progressDialog2211.dismiss();
-                                    Toast.makeText(HomeActivity.this, "Done", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                break;
+
+
 
 
 

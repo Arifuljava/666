@@ -120,7 +120,7 @@ public class Bkash_Activity extends AppCompatActivity  implements AdapterView.On
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         if (adapterView.getId() == R.id.area) {
             valueFromSpinner=adapterView.getItemAtPosition(i).toString();
-            if (valueFromSpinner.equals("Binance")) {
+            if (valueFromSpinner.equals("Bkash")) {
                 getee="1";
             }
             else  if (valueFromSpinner.equals("Rocket")) {

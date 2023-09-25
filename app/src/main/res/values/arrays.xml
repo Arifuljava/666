@@ -16,7 +16,9 @@
     <string-array name="payment">
         <item>Select Payment Method</item>
 
-        <item>Binance</item>
+        <item>Bkash</item>
+        <item>Rocket</item>
+        <item>Nagad</item>
 
     </string-array>
 </resources>
